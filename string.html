@@ -1,0 +1,75 @@
+<html>
+<body>
+<h2>JavaScript Math.sin()</h2>
+<p>Math.sin(x) returns the sin of x (given in radians):</p>
+<p>Angle in radians = (angle in degrees) * PI / 180.</p>
+<p id="demo"></p>
+<p id="a"></p>
+<p id="m"></p>
+<p id="s"></p>
+<p id="c"></p>
+<p id="r"></p>
+<p id="d"></p>
+<p id="f"></p>
+<p id="e"></p>
+<p id="leng"></p>
+<p id="substring"></p>
+<p id="substr"></p>
+<p id="rep">Please visit Microsoft!</p>
+<button onclick="myFunction()">Try it</button>
+<p id="repal"></p>
+<p id="upper">Hello World!</p>
+<button onclick="myFunction()">Try it</button>
+<p id="lower">Hello World!</p>
+<button onclick="myFunction()">Try it</button>
+<p id="concat"></p>
+<p id="trim"></p>
+<p id="charat"></p>
+<script>
+document.getElementById("demo").innerHTML = "The sine value of 90 degrees is " + Math.sin(90 * Math.PI / 180);
+document.getElementById("a").innerHTML = Math.sqrt(64);
+document.getElementById("m").innerHTML = Math.pow(8,2);
+document.getElementById("s").innerHTML =Math.min(0, 150, 30, 20, -8, -200);
+document.getElementById("c").innerHTML = Math.random();
+document.getElementById("r").innerHTML = Math.random();
+document.getElementById("d").innerHTML = Math.round(4.6);
+document.getElementById("f").innerHTML = Math.ceil(4.4);
+document.getElementById("e").innerHTML = Math.floor(4.7);
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("leng").innerHTML = text.length;
+let str = "Apple, Banana, Kiwi";
+document.getElementById("substring").innerHTML = str.substring(7,13);
+let str1 = "Apple, Banana, Kiwi";
+document.getElementById("substr").innerHTML = str1.substr(7,6);
+function myFunction() {
+  let text = document.getElementById("rep").innerHTML;
+  document.getElementById("rep").innerHTML =
+  text.replace("Microsoft","W3Schools");
+}
+let text1 = "I love cats. Cats are very easy to love. Cats are very popular."
+text = text.replaceAll("Cats","Dogs");
+text = text.replaceAll("cats","dogs");
+document.getElementById("repal").innerHTML = text1;
+function myFunction() {
+let text2 = document.getElementById("upper").innerHTML;
+document.getElementById("upper").innerHTML =
+text2.toUpperCase();
+}
+function myFunction() {
+  let text3 = document.getElementById("lower").innerHTML;
+  document.getElementById("lower").innerHTML =
+  text3.toLowerCase();
+}
+let text4 = "Hello";
+let text5 = "World!";
+let text6 = text4.concat(" ",text5);
+document.getElementById("concat").innerHTML = text6;
+let text7 = "     Hello World!     ";
+let text8 = text7.trim();
+document.getElementById("trim").innerHTML =
+"Length text7 = " + text7.length + "<br>Length text8 = " + text8.length;
+var text11 = "HELLO WORLD";
+document.getElementById("charat").innerHTML = text11.charAt(0);
+</script>
+</body>
+</html>
