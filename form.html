@@ -1,23 +1,35 @@
 <html>
 <head>
 <title>Form</title>
-<body><center>
+</head>
+<body align="center">
+<h1>Registration form</h1>
 <form>
-<fieldset>
-<legend>Name</legend>
-<label for="Username">Username</label>
-<input type="text" id="Username"><br>
-<label>Password
-<input type="Password" </label><br>
-<label Course>course</label>
-<select>
-<option>MCA</option>
-<option>MBA</option>
-<option>BCA</option>
-</select><br>
-<input type="reset" value="reset"><br>
-</fieldset>
+<table align="center">
+<tr>
+<td><label for="Name">Name:</label></td>
+<td><input type="text" id="Name"></td>
+</tr>
+<tr>
+<td><label for="Username">Username:</label></td>
+<td><input type="text" id="Username"></td>
+</tr>
+<tr>
+<td><label for="Phone number">Phone number:</label></td>
+<td><input type="text" id="Phone number"></td>
+</tr>
+<tr>
+<td><label for="Address">Address:</label></td>
+<td><textarea rows="3" cols="20" id="Address"></textarea></td>
+</tr>
+<tr>
+<td><label for="Password">Password:</label></td>
+<td><input type="password" id="Password"></td>
+</tr>
+<tr>
+<td colspan="2" align="center"><input type="Submit" value="Submit"></td>
+</tr>
 </form>
-</center>
+</table>
 </body>
 </html>
