@@ -5,17 +5,17 @@
 <body>
 <?php
 require('connect.php');
-$sql="select * from registration";
-$result=Mysqli_query($conn,$sql);
-if(Mysqli_num_rows($result)>0)
+$sql="select * from library";
+$result=mysqli_query($conn,$sql);
+if(mysqli_num_rows($result)>0)
 {
-	while($row=Mysqli_fetch_assoc($result))
+	while($row=mysqli_fetch_assoc($result))
 	{
-		echo"Book name".$row["book_name"]."<br>";
-		echo"Author".$row["aname"]."<br>";
-		echo"Publisher".$row["publisher"]."<br>";
-		echo"quantity".$row["quantity"]."<br>";
-		echo"price".$row["price"]."<br>";
+		echo"Book name".$row["Book_name"]."<br>";
+		echo"Author".$row["Author"]."<br>";
+		echo"Publisher".$row["Publisher"]."<br>";
+		echo"quantity".$row["Quantity"]."<br>";
+		echo"price".$row["Price"]."<br>";
 	}
 }
 else
@@ -26,7 +26,3 @@ mysqli_close($conn);
 ?>
 </body>
 </html>
-
-
-
-
