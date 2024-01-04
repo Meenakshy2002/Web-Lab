@@ -1,32 +1,26 @@
-
-<html><head>
-<title>h</title>
-</head>
-<body>
-<?php
-require("connect.php");
-if(isset($_POST["submit"]))
-{
-$id=$_POST["name"];
-$sql="select * from library where id=$id";
-$result=mysqli_query($conn,$sql);
-if(mysqli_num_rows($result)>0)
-{
-while($row=mysqli_fetch_assoc($result))
+<html>
+	<body>
+	<form method="post"action="update2.php">
+	<?php
+	require('connect.php');
+	if(isset($_POST['sub1']))
 	{
-	 echo"bookname".$row["Book_name"]."<br>";
-	 echo"author".$row["Author"]."<br>";
-	 echo"publisher".$row["Publisher"]."<br>";
-	 echo"quantity".$row["Quantity"]."<br>";
-	 echo"price".$row["Price"]."<br>";
-	}
+	$id1=$_POST['id'];
+	$bname=$_POST['bn'];
+	$author=$_POST['at'];
+	$publisher=$_POST['pub'];
+	$quantity=$_POST['qn'];
+	$price=$_POST['pz'];
+	$sql = "UPDATE library SET Book_name='$bname',Author='$author',Publisher='$publisher',Quantity='$quantity',Prize='$price' WHERE Id='$id1'";
+
+if (mysqli_query($conn, $sql)) {
+  echo "Record updated successfully";
+} else {
+  echo "Error updating record: " . mysqli_error($conn);
 }
-else
-{
-echo"no results";
-}	
+
 mysqli_close($conn);
-}
-?>
-</body>
+	}
+	?>
+	</body>
 </html>
